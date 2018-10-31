@@ -1,18 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Calculator from '~/src/Calculator'
 import HelloWorld from '~/src/HelloWorld'
-
-const a = 6
-const b = 2
-const calc = new Calculator()
-
-console.log(`${a} + ${b} =`, calc.plus(a, b))
-console.log(`${a} - ${b} =`, calc.minus(a, b))
-console.log(`${a} * ${b} =`, calc.multiply(a, b))
-console.log(`${a} / ${b} =`, calc.divide(a, b))
+import CalculatorDemo from '~/src/CalculatorDemo'
 
 ReactDOM.render(
-  <HelloWorld />,
+  <div>
+    <HelloWorld />
+    <CalculatorDemo a={6} b={2} />
+  </div>,
   document.getElementById('root')
 )
