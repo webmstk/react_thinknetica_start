@@ -26,13 +26,9 @@ export default class Receipt {
   }
 
   total () {
-    return this.positions.reduce((acc, el) => {
-      if (!el.price || !el.quantity) {
-        return acc
-      }
-
-      return acc + el.price * el.quantity
-    }, 0)
+    return this.positions.reduce((acc, el) => (
+      acc + el.price * el.quantity
+    ), 0)
   }
 
   _isValid ({ name, price, quantity }) {
