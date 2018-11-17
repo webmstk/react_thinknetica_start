@@ -13,14 +13,14 @@ class CatalogPage extends Component {
     }
   }
 
-  addToBasket (id) {
+  addToBasket (id, quantity = 1) {
     const { basket } = this.state
-    const quantity = basket[id] ? basket[id] + 1 : 1
+    const total = basket[id] ? basket[id] + quantity : quantity
 
     this.setState({
       basket: {
         ...basket,
-        [id]: quantity,
+        [id]: total,
       },
     })
   }
