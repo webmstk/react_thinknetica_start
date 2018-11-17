@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '~/src/elements/Button'
+import Button from '~/src/components/elements/Button'
 import { BasketConsumer } from '~/src/contexts/BasketContext'
 
 const Basket = () => {

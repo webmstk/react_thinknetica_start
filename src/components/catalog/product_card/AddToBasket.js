@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Input from '~/src/elements/Input'
-import Button from '~/src/elements/Button'
+import Input from '~/src/components/elements/Input'
+import Button from '~/src/components/elements/Button'
 import { BasketConsumer } from '~/src/contexts/BasketContext'
 
 class AddToBasket extends Component {
