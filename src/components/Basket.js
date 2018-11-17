@@ -20,17 +20,30 @@ const Basket = () => {
     )
   }
 
+  const onDrop = (e, addToBasket) => {
+    e.preventDefault()
+    const { id, quantity } = JSON.parse(e.dataTransfer.getData('text'))
+
+    addToBasket(id, quantity)
+  }
+
   return (
-    <div style={{ border: '1px solid #999', padding: '20px' }}>
-      <BasketConsumer>
-        {
-          ({ basket }) => {
-            const quantity = countBasketItems(basket)
-            return renderBasket(quantity)
-          }
+    <BasketConsumer>
+      {
+        ({ basket, addToBasket }) => {
+          const quantity = countBasketItems(basket)
+          return (
+            <div
+              style={{ border: '1px solid #999', padding: '20px' }}
+              onDragOver={e => e.preventDefault()}
+              onDrop={e => onDrop(e, addToBasket)}
+            >
+              {renderBasket(quantity)}
+            </div>
+          )
         }
-      </BasketConsumer>
-    </div>
+      }
+    </BasketConsumer>
   )
 }
 
