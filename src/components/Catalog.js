@@ -3,13 +3,21 @@ import PropTypes from 'prop-types'
 import ProductCard from './catalog/ProductCard'
 
 const Catalog = ({ items }) => {
+  const styles = {
+    wrap: {
+      border: '1px solid #999',
+      padding: '5px',
+      margin: '20px 0',
+      cursor: 'pointer',
+    }
+  }
+
   return (
     <div>
       {items.map(item => {
         return (
-          <div key={item.id}>
+          <div key={item.id} style={styles.wrap}>
             <ProductCard {...item} />
-            <br /><br />
           </div>
         )
       })}
