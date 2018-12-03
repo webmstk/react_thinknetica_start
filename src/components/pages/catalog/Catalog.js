@@ -9,7 +9,7 @@ const Catalog = ({ items }) => {
       padding: '5px',
       margin: '20px 0',
       cursor: 'pointer',
-    }
+    },
   }
 
   return (
