@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Image from './product_card/Image'
-import TextBox from './product_card/TextBox'
-import Price from './product_card/Price'
-import AddToBasket from './product_card/AddToBasket'
+import Image from './image/Image'
+import TextBox from './text_box/TextBox'
+import Price from './price/Price'
+import AddToBasket from './add_to_basket/AddToBasket'
 
 const ProductCard = ({ id, title, ...props }) => {
   const onDragStart = e => {

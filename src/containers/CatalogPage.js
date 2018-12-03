@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import Catalog from '~/components/Catalog'
+import Catalog from '~/components/pages/catalog/Catalog'
+import Basket from '~/components/pages/catalog/Basket/basket'
 import Products from '~/constants/Products'
-import Basket from '~/components/Basket'
 import { BasketProvider } from '~/contexts/BasketContext'
 
 class CatalogPage extends Component {
