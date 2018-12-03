@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Receipt from '~/src/Receipt'
+import Receipt from '~/Receipt'
 
 class ReceiptDemo extends Component {
   renderPosition ({ name, quantity, price }, key) {

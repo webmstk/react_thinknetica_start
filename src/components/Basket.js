@@ -1,6 +1,6 @@
 import React from 'react'
-import Button from '~/src/components/elements/Button'
-import { BasketConsumer } from '~/src/contexts/BasketContext'
+import Button from '~/components/elements/Button'
+import { BasketConsumer } from '~/contexts/BasketContext'
 
 const Basket = () => {
   const countBasketItems = basket => (

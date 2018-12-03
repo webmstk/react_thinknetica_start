@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import Catalog from '~/src/components/Catalog'
-import Products from '~/src/constants/Products'
-import Basket from '~/src/components/Basket'
-import { BasketProvider } from '~/src/contexts/BasketContext'
+import Catalog from '~/components/Catalog'
+import Products from '~/constants/Products'
+import Basket from '~/components/Basket'
+import { BasketProvider } from '~/contexts/BasketContext'
 
 class CatalogPage extends Component {
   constructor (props) {
