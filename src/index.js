@@ -1,11 +1,23 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import routes from '~/routes'
 import MainLayout from '~/components/layouts/main/MainLayout'
-import CatalogPage from '~/containers/CatalogPage'
+import BasketContainer from '~/containers/BasketContainer'
+
+const routeWithSubroutes = (route, key) => {
+  return <Route key={key} {...route} />
+}
 
 ReactDOM.render(
-  <MainLayout>
-    <CatalogPage />
-  </MainLayout>,
+  <Router>
+    <MainLayout>
+      <BasketContainer>
+        <Switch>
+          {routes.map((route, key) => routeWithSubroutes(route, key))}
+        </Switch>
+      </BasketContainer>
+    </MainLayout>
+  </Router>,
   document.getElementById('root')
 )

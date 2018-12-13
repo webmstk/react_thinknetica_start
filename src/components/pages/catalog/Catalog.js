@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import ProductCard from './product_card/ProductCard'
+import ProductCard from '~/components/shared/product_card/ProductCard'
 
-const Catalog = ({ items }) => {
+const Catalog = ({ products }) => {
   const styles = {
     wrap: {
       border: '1px solid #999',
@@ -14,7 +14,7 @@ const Catalog = ({ items }) => {
 
   return (
     <div>
-      {items.map(item => {
+      {products.map(item => {
         return (
           <div key={item.id} style={styles.wrap}>
             <ProductCard {...item} />
@@ -26,7 +26,7 @@ const Catalog = ({ items }) => {
 }
 
 Catalog.propTypes = {
-  items: PropTypes.array.isRequired,
+  products: PropTypes.array.isRequired,
 }
 
 export default Catalog

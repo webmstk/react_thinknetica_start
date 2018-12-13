@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Button = ({ value, onClick }) => {
+const Button = ({ onClick, children }) => {
   return (
-    <button onClick={onClick}>{value}</button>
+    <button onClick={onClick}>{children}</button>
   )
 }
 
 Button.propTypes = {
-  value: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   onClick: PropTypes.func,
 }
 

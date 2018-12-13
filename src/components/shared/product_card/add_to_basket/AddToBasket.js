@@ -57,10 +57,9 @@ class AddToBasket extends Component {
         <BasketConsumer>
           {
             ({ addToBasket }) => (
-              <Button
-                value='добавить в корзину'
-                onClick={() => this.onBasketAdd(this.props.id, addToBasket)}
-              />
+              <Button onClick={() => this.onBasketAdd(this.props.id, addToBasket)}>
+                добавить в корзину
+              </Button>
             )
           }
         </BasketConsumer>

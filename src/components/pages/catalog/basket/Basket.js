@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { basketPath } from '~/helpers/routes'
 import Button from '~/components/elements/button/Button'
 import { BasketConsumer } from '~/contexts/BasketContext'
 
@@ -15,7 +17,9 @@ const Basket = () => {
     return (
       <div>
         <div>Товаров в корзине: {quantity}</div>
-        <div><Button value='В корзину' onClick={() => console.log('not implemented')} /></div>
+        <Button>
+          <Link to={basketPath()} style={{ textDecoration: 'none', color: 'black' }}>В корзину</Link>
+        </Button>
       </div>
     )
   }
