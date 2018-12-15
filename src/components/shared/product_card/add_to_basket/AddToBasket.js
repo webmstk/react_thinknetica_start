@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Input from '~/src/components/elements/Input'
-import Button from '~/src/components/elements/Button'
-import { BasketConsumer } from '~/src/contexts/BasketContext'
+import Input from '~/components/elements/input/Input'
+import Button from '~/components/elements/button/Button'
+import { BasketConsumer } from '~/contexts/BasketContext'
 
 class AddToBasket extends Component {
   constructor (props) {
@@ -57,10 +57,9 @@ class AddToBasket extends Component {
         <BasketConsumer>
           {
             ({ addToBasket }) => (
-              <Button
-                value='добавить в корзину'
-                onClick={() => this.onBasketAdd(this.props.id, addToBasket)}
-              />
+              <Button onClick={() => this.onBasketAdd(this.props.id, addToBasket)}>
+                добавить в корзину
+              </Button>
             )
           }
         </BasketConsumer>
